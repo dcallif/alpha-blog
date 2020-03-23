@@ -8,21 +8,14 @@ Example to make controller: `rails generate controller pages`
 
 Used scaffold to make it a little easier: `rails generate scaffold Article title:string description:text`
 
-* Ruby version
+* Ruby version: 2.6.5
 
-* System dependencies
-`rails webpacker:install`
+* System dependencies: `rails webpacker:install`
 
-* Configuration
+* Database creation: `rails db:migrate`
 
-* Database creation
+* Database initialization: Coming...
 
-* Database initialization
+* How to run the test suite: Coming...
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Services (job queues, cache servers, search engines, etc.): Coming...
