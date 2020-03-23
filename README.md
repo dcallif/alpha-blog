@@ -10,7 +10,7 @@ Used scaffold to make it a little easier: `rails generate scaffold Article title
 
 * Ruby version: 2.6.5
 
-* System dependencies: `rails webpacker:install`
+* System dependencies: `rails webpacker:install` | [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/download/)
 
 * Database creation: `rails db:migrate`
 
