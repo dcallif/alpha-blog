@@ -5,6 +5,7 @@ application up and running.
 
 From project home:
 Example to make controller: `rails generate controller pages`
+
 Used scaffold to make it a little easier: `rails generate scaffold Article title:string description:text`
 
 * Ruby version
