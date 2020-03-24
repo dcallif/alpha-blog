@@ -1,34 +1,3 @@
 <h1 align="center">Listing of all Articles</h1>
 
-<table>
-  <tbody>
-    <% @articles.each do |article| %>
-    <div class="row">
-      <div class="col-xs-8 col-xs-offset-2">
-        <div class="well well-lg">
-          <div class="article-title">
-            <strong><%= link_to article.title, article_path(article) %></strong>
-          </div>
-          <div class="article-body">
-            <blockquote><%= truncate(article.description, length: 100) %></blockquote>
-            <div class="article-meta-details">
-              <small>Created by: <%= article.user.username if article.user %>,
-              <%= time_ago_in_words(article.created_at) %> ago,
-              last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
-            </div>
-            <%= link_to 'Edit this Article', edit_article_path(article), class: "btn btn-xs btn-primary" %>
-            <%= link_to "Delete this Article", article_path(article), method: :delete,
-  data: {confirm: "Are you sure you want to delete?"}, class: "btn btn-xs btn-danger" %>
-          </div>
-        </div>
-      </div>
-    </div>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<div class="row">
-  <%= link_to 'Create an Article', new_article_path, class: "btn btn-xs btn-success" %>
-</div>
+<%= render 'article', obj: @articles %>
