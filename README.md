@@ -3,22 +3,19 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+From project home:
+Example to make controller: `rails generate controller pages`
 
-* Ruby version
+Used scaffold to make it a little easier: `rails generate scaffold Article title:string description:text`
 
-* System dependencies
+* Ruby version: 2.6.5
 
-* Configuration
+* System dependencies: `rails webpacker:install` | [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/download/)
 
-* Database creation
+* Database creation: `rails db:migrate`
 
-* Database initialization
+* Database initialization: Coming...
 
-* How to run the test suite
+* How to run the test suite: Coming...
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Services (job queues, cache servers, search engines, etc.): Coming...
