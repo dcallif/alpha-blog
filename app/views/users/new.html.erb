@@ -1,34 +1,3 @@
-<%= form_with(model: @user, local: true) do |form| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation" class="form">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this article from being saved:</h2>
+<h1 align="center">Sign up for Alpha Blog</h1>
 
-      <ul>
-        <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-<div class="form" align="center">
-  <div class="form-group" align="center">
-    <h2><%= @user.username %></h2>
-    <%= form.text_field :username, class: "form-control", placeholder: "Enter Username", autofocus: true %>
-  </div>
-
-  <div class="form-group" align="center">
-    <h2><%= @user.email %></h2>
-    <%= form.email_field :email, class: "form-control", placeholder: "Email here" %>
-  </div>
-
-  <div class="form-group" align="center">
-    <h2><%= @user.password_digest %></h2>
-    <%= form.password_field :password_digest, class: "form-control", placeholder: "Password here" %>
-  </div>
-</div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<%= render 'form' %>
