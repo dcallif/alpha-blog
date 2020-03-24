@@ -60,6 +60,15 @@
   background-color: black;
 }
 
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+
+.description {
+  margin-top: 0;
+}
+
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -87,3 +96,38 @@ footer ul li {
 
 label {
   display: block; }
+
+  blockquote {
+  min-height: 5em;
+  padding   : 1em 4em;
+  font      : 1em/150% sans-serif;
+  position  : relative;
+  background-color: lightgoldenrodyellow;
+}
+
+blockquote::before,
+blockquote::after {
+  position: absolute;
+  height  : 3rem;
+  font    : 6rem/100% Georgia, "Times New Roman", Times, serif;
+}
+
+blockquote::before {
+  content: '“';
+  top    : 0.3rem;
+  left   : 0.9rem;
+}
+
+blockquote::after {
+  content: '”';
+  bottom : 0.3rem;
+  right  : 0.8rem;
+}
+
+blockquote i {
+  display   : block;
+  font-size : 0.8em;
+  margin-top: 1rem;
+  text-style: italic;
+  text-align: right;
+}
