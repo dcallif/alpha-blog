@@ -1,6 +1,6 @@
 <%= form_with(model: article, local: true) do |form| %>
   <% if article.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="form">
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
 
       <ul>
@@ -11,15 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+<div class="form" align="center">
+  <div class="form-group" align="center">
+    <h2><%= form.label :title %></h2>
+    <%= form.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  <div class="form-group" align="center">
+    <h2><%= form.label "Body" %></h2>
+    <%= form.text_area :description, class: "form-control", placeholder: "Body of article", rows: 10 %>
   </div>
+</div>
 
   <div class="actions">
     <%= form.submit %>
