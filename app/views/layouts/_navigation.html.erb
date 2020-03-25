@@ -17,7 +17,11 @@
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item"><%= link_to 'Log out', logout_path, method: :delete, class: "navbar-brand" %></li>
+      <% if logged_in? %>
+        <li class="nav-item"><%= link_to 'Log out', logout_path, method: :delete, class: "navbar-brand" %></li>
+      <% else %>
+        <li class="nav-item"><%= link_to 'Log in', login_path, class: "navbar-brand" %></li>
+      <% end %>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
