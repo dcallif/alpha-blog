@@ -19,6 +19,15 @@
     <ul class="nav navbar-nav navbar-right">
       <% if logged_in? %>
         <li class="nav-item"><%= link_to 'Log out', logout_path, method: :delete, class: "navbar-brand" %></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            User info
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item"><%= link_to "Edit your profile", edit_user_path(current_user), class: "navbar-brand" %></a>
+            <a class="dropdown-item"><%= link_to "View your profile", user_path(current_user), class: "navbar-brand" %></a>
+          </div>
+        </li>
       <% else %>
         <li class="nav-item"><%= link_to 'Log in', login_path, class: "navbar-brand" %></li>
       <% end %>
