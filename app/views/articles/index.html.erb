@@ -2,7 +2,11 @@
 <div align="center">
   <%= will_paginate %>
 </div>
-<%= render 'article', obj: @articles %>
+<div id="outer-div" width="100%">
+  <div id="inner-div">
+    <%= render 'article', obj: @articles %>
+  </div>
+</div>
 <div align="center">
   <%= will_paginate %>
 </div>
