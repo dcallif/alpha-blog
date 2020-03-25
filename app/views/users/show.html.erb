@@ -1,9 +1,10 @@
-<h1 align="center">Welcome to <%= @user.username %>'s Page</h1>
+<h1 align="center">Welcome to
+  <%= @user.username %>'s Page</h1>
 <hr>
 <h1 align="center"><%= gravatar_for @user %></h1>
 <hr>
 <h4 align="center"><%= @user.username %>'s articles</h4>
-<div class="center">
+<div align="center">
   <%= will_paginate @user_articles %>
 </div>
 <div id="outer-div" width="100%">
@@ -11,6 +12,6 @@
     <%= render 'articles/article', obj: @user.articles, class: "form-control" %>
   </div>
 </div>
-<div class="center">
+<div align="center">
   <%= will_paginate @user_articles %>
 </div>
