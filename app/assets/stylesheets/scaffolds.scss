@@ -34,6 +34,18 @@
   font-weight: bold;
 }
 
+#outer-div {
+width: 100%;
+text-align: left;
+}
+
+#inner-div {
+display: inline-block;
+margin: 0 auto;
+padding: 3px;
+}
+
+
 .center {
   text-align: center;
 }
@@ -119,7 +131,7 @@ footer ul li {
 label {
   display: block; }
 
-  blockquote {
+blockquote {
   min-height: 5em;
   padding   : 1em 4em;
   font      : 1em/150% sans-serif;
