@@ -4,14 +4,8 @@
 <h1 align="center"><%= gravatar_for @user %></h1>
 <hr>
 <h4 align="center"><%= @user.username %>'s articles</h4>
-<div align="center">
-  <%= will_paginate @user_articles %>
-</div>
 <div id="outer-div" width="100%">
   <div id="inner-div">
     <%= render 'articles/article', obj: @user.articles, class: "form-control" %>
   </div>
-</div>
-<div align="center">
-  <%= will_paginate @user_articles %>
 </div>
