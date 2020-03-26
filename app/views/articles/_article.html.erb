@@ -31,7 +31,7 @@
 
 <br>
 
-<% if logged_in? && (current_user == article.user || current_user.admin?) %>
+<% if logged_in? || current_user.admin? %>
   <div class="row">
     <%= link_to 'Create an Article', new_article_path, class: "btn btn-xs btn-success" %>
   </div>
