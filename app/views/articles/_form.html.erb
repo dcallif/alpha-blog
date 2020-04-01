@@ -16,10 +16,15 @@
     <h2><%= form.label :title %></h2>
     <%= form.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true %>
   </div>
-
   <div class="form-group" align="center">
     <h2><%= form.label "Body" %></h2>
     <%= form.text_area :description, class: "form-control", placeholder: "Body of article", rows: 10 %>
+  </div>
+  <div class="form-check" align="center">
+    <h2><%= form.label "Category" %></h2>
+    <%= form.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+    <% cb.label(class: "checkbox-inline input_checkbox") { cb.check_box(class: "checkbox") + cb.text } %>
+    <% end %>
   </div>
 </div>
 
