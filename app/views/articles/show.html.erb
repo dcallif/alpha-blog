@@ -3,6 +3,9 @@
 <div class="col-xs-8 col-xs-offset-2">
   <hr>
   <blockquote><%= simple_format(@article.description) %></blockquote>
+  <% if @article.categories.any? %>
+    <p>Categories: <%= render @article.categories %></p>
+  <% end %>
   <div class="article-meta-details">
     <small>Created by:
       <%= @article.user.username if @article.user %>,
