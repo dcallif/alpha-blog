@@ -1,0 +1,5 @@
+<h1 align="center">Edit Category Name</h1>
+
+<% if logged_in? and current_user.admin? %>
+  <%= render 'form' %>
+<% end %>
